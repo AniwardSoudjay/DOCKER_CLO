@@ -1,0 +1,118 @@
+2024-01-29 14:00:36,945 - INFO - Starting script main.py.
+
+2024-01-29 15:25:40,025 - INFO - Starting script main.py.
+2024-01-29 15:25:40,026 - DEBUG - Attempting to connect to: http://fastapi:8000/v1/sentiment
+2024-01-29 15:25:40,032 - DEBUG - 
+============================
+ Content test
+============================
+request done at "/v1/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+expected result positive = True
+actual result positive = True
+score value = 0.5994
+==> SUCCESS
+
+2024-01-29 15:25:40,032 - DEBUG - Attempting to connect to: http://fastapi:8000/v1/sentiment
+2024-01-29 15:25:40,036 - DEBUG - 
+============================
+ Content test
+============================
+request done at "/v1/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="that sucks"
+expected result positive = True
+actual result positive = False
+score value = -0.3612
+==> FAILURE
+
+2024-01-29 15:25:40,036 - DEBUG - Attempting to connect to: http://fastapi:8000/v2/sentiment
+2024-01-29 15:25:40,040 - DEBUG - 
+============================
+ Content test
+============================
+request done at "/v2/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+expected result positive = False
+actual result positive = True
+score value = 0.5994
+==> FAILURE
+
+2024-01-29 15:25:40,040 - DEBUG - Attempting to connect to: http://fastapi:8000/v2/sentiment
+2024-01-29 15:25:40,044 - DEBUG - 
+============================
+ Content test
+============================
+request done at "/v2/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="that sucks"
+expected result positive = False
+actual result positive = False
+score value = -0.3612
+==> SUCCESS
+
+2024-01-29 15:25:40,044 - INFO - Script main.py completed.
+2024-01-29 15:26:22,003 - INFO - Starting script main.py.
+2024-01-29 15:26:22,003 - DEBUG - Attempting to connect to: http://fastapi:8000/v1/sentiment
+2024-01-29 15:26:22,012 - DEBUG - 
+============================
+ Content test
+============================
+request done at "/v1/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+expected result positive = True
+actual result positive = True
+score value = 0.5994
+==> SUCCESS
+
+2024-01-29 15:26:22,013 - DEBUG - Attempting to connect to: http://fastapi:8000/v1/sentiment
+2024-01-29 15:26:22,021 - DEBUG - 
+============================
+ Content test
+============================
+request done at "/v1/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="that sucks"
+expected result positive = True
+actual result positive = False
+score value = -0.3612
+==> FAILURE
+
+2024-01-29 15:26:22,021 - DEBUG - Attempting to connect to: http://fastapi:8000/v2/sentiment
+2024-01-29 15:26:22,028 - DEBUG - 
+============================
+ Content test
+============================
+request done at "/v2/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+expected result positive = False
+actual result positive = True
+score value = 0.5994
+==> FAILURE
+
+2024-01-29 15:26:22,028 - DEBUG - Attempting to connect to: http://fastapi:8000/v2/sentiment
+2024-01-29 15:26:22,033 - DEBUG - 
+============================
+ Content test
+============================
+request done at "/v2/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="that sucks"
+expected result positive = False
+actual result positive = False
+score value = -0.3612
+==> SUCCESS
+
+2024-01-29 15:26:22,034 - INFO - Script main.py completed.

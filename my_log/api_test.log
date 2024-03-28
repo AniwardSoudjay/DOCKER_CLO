@@ -1,0 +1,64 @@
+
+INFO:__main__:Starting script main.py.
+DEBUG:__main__:Attempting to connect to: http://fastapi:8000/v1/sentiment
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): fastapi:8000
+DEBUG:urllib3.connectionpool:http://fastapi:8000 "GET /v1/sentiment?username=alice&password=wonderland&sentence=life+is+beautiful HTTP/1.1" 200 81
+DEBUG:__main__:
+============================
+ Content test
+============================
+request done at "/v1/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+expected result positive = True
+actual result positive = True
+score value = 0.5994
+==> SUCCESS
+
+DEBUG:__main__:Attempting to connect to: http://fastapi:8000/v1/sentiment
+DEBUG:urllib3.connectionpool:http://fastapi:8000 "GET /v1/sentiment?username=alice&password=wonderland&sentence=that+sucks HTTP/1.1" 200 75
+DEBUG:__main__:
+============================
+ Content test
+============================
+request done at "/v1/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="that sucks"
+expected result positive = True
+actual result positive = False
+score value = -0.3612
+==> FAILURE
+
+DEBUG:__main__:Attempting to connect to: http://fastapi:8000/v2/sentiment
+DEBUG:urllib3.connectionpool:http://fastapi:8000 "GET /v2/sentiment?username=alice&password=wonderland&sentence=life+is+beautiful HTTP/1.1" 200 81
+DEBUG:__main__:
+============================
+ Content test
+============================
+request done at "/v2/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="life is beautiful"
+expected result positive = False
+actual result positive = True
+score value = 0.5994
+==> FAILURE
+
+DEBUG:__main__:Attempting to connect to: http://fastapi:8000/v2/sentiment
+DEBUG:urllib3.connectionpool:http://fastapi:8000 "GET /v2/sentiment?username=alice&password=wonderland&sentence=that+sucks HTTP/1.1" 200 75
+DEBUG:__main__:
+============================
+ Content test
+============================
+request done at "/v2/sentiment"
+| username="alice"
+| password="wonderland"
+| sentence="that sucks"
+expected result positive = False
+actual result positive = False
+score value = -0.3612
+==> SUCCESS
+
+INFO:__main__:Script main.py completed.
